@@ -11,9 +11,12 @@ const clients = [
 	"LogoTerralpa.png",
 ];
 
+// Duplicate clients for seamless loop
+const duplicatedClients = [...clients, ...clients, ...clients];
+
 export const ClientsLogos = () => {
 	return (
-		<section className="py-20 bg-white">
+		<section className="py-20 bg-white overflow-hidden">
 			<Container>
 				<div className="text-center mb-12">
 					<Typography variant="h3" className="text-slate-800">
@@ -21,15 +24,21 @@ export const ClientsLogos = () => {
 					</Typography>
 				</div>
 
-				<div className="flex flex-wrap justify-center items-center gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-					{clients.map((client, index) => (
-						<div
-							key={index}
-							className="h-16 rounded px-6 flex items-center "
-						>
-							<img src={`./Logoso/${client}`} alt="" className="h-12 w-auto" />
-						</div>
-					))}
+				<div className="relative w-full overflow-hidden">
+					<div className="flex w-max animate-scroll">
+						{duplicatedClients.map((client, index) => (
+							<div
+								key={index}
+								className="h-16 px-8 flex items-center justify-center min-w-[200px] opacity-70 grayscale hover:grayscale-0 transition-all duration-300"
+							>
+								<img
+									src={`./Logoso/${client}`}
+									alt={`Cliente ${index}`}
+									className="h-12 w-auto object-contain"
+								/>
+							</div>
+						))}
+					</div>
 				</div>
 			</Container>
 		</section>

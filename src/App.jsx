@@ -7,6 +7,7 @@ import { ServiceDetail } from './pages/ServiceDetail';
 import { Plans } from './pages/Plans';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
+import { ScrollToTop } from './utils/ScrollToTop';
 
 /**
  * App Component
@@ -16,6 +17,7 @@ import { NotFound } from './pages/NotFound';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <MainLayout>
         <Routes>
           {/* Main Landing Page */}
