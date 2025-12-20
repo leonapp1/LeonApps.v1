@@ -91,6 +91,122 @@ export const plansData = [
 					"Archivos editables (AI, EPS)",
 					"Derechos de uso comercial",
 				],
+				isPopular: true,
+			},
+			{
+				title: "Branding Total",
+				price: "1,500",
+				description:
+					"La solución completa para empresas que buscan una imagen corporativa de alto impacto.",
+				features: [
+					"Diseño de Logotipo (5 propuestas)",
+					"Manual de marca completo",
+					"Papelería corporativa completa",
+					"Plantillas para redes sociales",
+					"Archivos fuente editables",
+					"Asesoría de imagen",
+					"Derechos de uso total",
+				],
+			},
+		],
+	},
+	{
+		id: "marketing-publicidad",
+		serviceName: "Marketing y Publicidad",
+		color: "marketing",
+		plans: [
+			{
+				title: "Social Starter",
+				price: "600",
+				description:
+					"Gestión básica de redes sociales para mantener tu marca activa.",
+				features: [
+					"Gestión de 2 redes sociales (FB/IG)",
+					"8 publicaciones mensuales",
+					"Diseño gráfico de posts",
+					"Respuesta a comentarios básica",
+					"Reporte mensual simple",
+				],
+			},
+			{
+				title: "Social Growth",
+				price: "1,200",
+				description:
+					"Estrategia de crecimiento acelerado para captar nuevos clientes.",
+				features: [
+					"Gestión de 3 redes sociales",
+					"15 publicaciones mensuales",
+					"4 historias semanales",
+					"Gestión de campañas de publicidad (Ads)",
+					"Community Management activo",
+					"Reporte mensual detallado",
+				],
+				isPopular: true,
+			},
+			{
+				title: "Dominio Total",
+				price: "2,500",
+				description:
+					"Estrategia 360° para marcas que quieren liderar su mercado.",
+				features: [
+					"Gestión de todas las redes sociales",
+					"Publicaciones diarias",
+					"Creación de contenido en video (Reels/TikTok)",
+					"Campañas avanzadas de Google & Meta Ads",
+					"Email Marketing",
+					"Asesoría estratégica quincenal",
+					"Reportes en tiempo real",
+				],
+			},
+		],
+	},
+	{
+		id: "software-cotizacion",
+		serviceName: "Software de Cotización",
+		color: "software",
+		plans: [
+			{
+				title: "Licencia Mensual",
+				price: "150",
+				description:
+					"Acceso completo a la plataforma con pago flexible mes a mes.",
+				features: [
+					"Usuarios ilimitados",
+					"Cotizaciones ilimitadas",
+					"Envío automático de correos",
+					"Base de datos de clientes",
+					"Soporte por email",
+					"Actualizaciones incluidas",
+				],
+			},
+			{
+				title: "Licencia Anual",
+				price: "1,500",
+				description:
+					"Ahorra 2 meses pagando el año completo. Ideal para negocios establecidos.",
+				features: [
+					"Todo lo del plan mensual",
+					"Descuento de 2 meses",
+					"Dominio personalizado",
+					"Soporte prioritario 24/7",
+					"Capacitación inicial para el equipo",
+					"Configuración asistida",
+				],
+				isPopular: true,
+			},
+			{
+				title: "Enterprise / A Medida",
+				price: "Consultar",
+				description:
+					"Soluciones personalizadas para grandes empresas con requerimientos específicos.",
+				features: [
+					"Funcionalidades a medida",
+					"Integración con ERP/CRM",
+					"Servidor dedicado",
+					"SLA garantizado",
+					"Gerente de cuenta dedicado",
+					"Auditoría de seguridad",
+				],
 			},
 		],
 	},

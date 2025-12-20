@@ -13,6 +13,7 @@ const navLinks = [
   { name: 'Proyectos', path: '/proyectos' },
   { name: 'Servicios', path: '/servicios', hasSubmenu: true },
   { name: 'Planes', path: '/planes' },
+  { name: 'Contacto', path: '/contacto' },
 ];
 
 export const Navbar = () => {
