@@ -82,7 +82,7 @@ export const ProcessTimeline: React.FC = () => {
 									transition={{ delay: index * 0.1 }}
 									className="flex gap-6"
 								>
-									<div className="flex-shrink-0 w-12 h-12 bg-blue-50 text-primary font-bold text-xl rounded-lg flex items-center justify-center shadow-sm">
+									<div className="shrink-0 w-12 h-12 bg-blue-50 text-primary font-bold text-xl rounded-lg flex items-center justify-center shadow-sm">
 										{step.number}
 									</div>
 									<div>

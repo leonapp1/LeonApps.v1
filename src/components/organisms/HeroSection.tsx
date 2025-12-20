@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
 	return (
-		<section className="relative overflow-hidden pt-10 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-br from-blue-50 to-white">
+		<section className="relative overflow-hidden pt-10 pb-20 lg:pt-20 lg:pb-28 bg-linear-to-br from-blue-50 to-white">
 			<div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
 			<div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
 
