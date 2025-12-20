@@ -6,6 +6,7 @@ const clients = [
 	"LogoEETV.png",
 	"LogoMMJ.png",
 	"LogoTerralpa.png",
+	"LogoPsicologos.svg",
 	"LogoEETV.png",
 	"LogoMMJ.png",
 	"LogoTerralpa.png",
