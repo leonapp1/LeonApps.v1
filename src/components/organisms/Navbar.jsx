@@ -100,6 +100,83 @@ export const Navbar = () => {
             ))}
           </div>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden p-2 text-slate-600 hover:text-primary transition-colors"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-xl md:hidden overflow-hidden"
+            >
+              <div className="flex flex-col p-4 space-y-2 max-h-[calc(100vh-80px)] overflow-y-auto">
+                {navLinks.map((link) => (
+                  <div key={link.path}>
+                    {link.hasSubmenu ? (
+                      <>
+                        <button
+                          onClick={() => setActiveSubmenu(activeSubmenu === link.name ? null : link.name)}
+                          className={cn(
+                            "flex items-center justify-between w-full p-3 text-base font-medium rounded-lg transition-colors",
+                             activeSubmenu === link.name ? "text-primary bg-blue-50" : "text-slate-600 hover:bg-slate-50"
+                          )}
+                        >
+                          {link.name}
+                          <ChevronDown 
+                            size={16} 
+                            className={cn("transition-transform duration-200", activeSubmenu === link.name ? "rotate-180" : "")} 
+                          />
+                        </button>
+                        <AnimatePresence>
+                            {activeSubmenu === link.name && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="overflow-hidden pl-2"
+                                >
+                                    {services.map(service => (
+                                        <Link
+                                            key={service.id}
+                                            to={`/servicios/${service.id}`}
+                                            className="block p-3 text-sm text-slate-500 hover:text-primary transition-colors border-l-2 border-slate-100 hover:border-primary ml-2"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {service.title}
+                                        </Link>
+                                    ))}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                      </>
+                    ) : (
+                      <Link
+                        to={link.path}
+                        className={cn(
+                          "block p-3 text-base font-medium rounded-lg transition-colors",
+                          location.pathname === link.path ? "text-primary bg-blue-50" : "text-slate-600 hover:bg-slate-50"
+                        )}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </Container>
     </nav>
   );
